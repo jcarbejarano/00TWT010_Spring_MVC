@@ -85,7 +85,7 @@ public class ProductoServiceImpl implements ProductoService {
 	@Override
 	public void borrarProducto(String id) throws GestionProductoException {
 		Producto p = productoRepositorio.getProductoPorId(id);
-		if (p != null) {
+		if (p == null) {
 			throw new GestionProductoException(id,
 					"No pudo borrar el Producto. No existe con el id indicado ");
 		}

@@ -101,4 +101,10 @@ public class EnMemoriaProductoRepository implements ProductoRepository {
          }
 	}
     
+    @Override
+    public void borrarProducto(String id) {
+    	// TODO Auto-generated method stub
+    	
+    }
+    
 }
