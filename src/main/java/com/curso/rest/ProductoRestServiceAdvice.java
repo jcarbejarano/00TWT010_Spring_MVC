@@ -14,7 +14,7 @@ class ProductoRestServiceAdvice {
 	@ResponseBody
 	@ExceptionHandler(GestionProductoException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
-	String employeeNotFoundHandler(GestionProductoException ex) {
+	public String employeeNotFoundHandler(GestionProductoException ex) {
 		return "{ msg: '"+ ex.getMessage() + " id producto:  "
 				+ ex.getIdProducto() +  "}'";
 	}

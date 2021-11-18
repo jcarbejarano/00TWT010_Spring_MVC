@@ -31,13 +31,8 @@ public class ProductoRESTController {
 	
 
 	  @PostMapping("/rest/productos")
-	  public  void nuevoProducto(@RequestBody Producto nuevoProducto) {  
-	     try {
+	  public  void nuevoProducto(@RequestBody Producto nuevoProducto) throws GestionProductoException {  
 			service.crearProducto(nuevoProducto);
-		} catch (GestionProductoException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	  }
 
 	  
