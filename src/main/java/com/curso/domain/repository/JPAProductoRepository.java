@@ -42,13 +42,15 @@ public class JPAProductoRepository  implements ProductoRepository{
 	}
 
 	@Override
-	public void addProducto(Producto producto) {
+	public Producto addProducto(Producto producto) {
 		em.persist(producto);
+		return producto;
 	}
 
 	@Override
-	public void modificarProducto(Producto producto) {
-		em.merge(producto);
+	public Producto modificarProducto(Producto producto) {
+		Producto pBD = em.merge(producto);
+		return pBD;
 	}
 
 	

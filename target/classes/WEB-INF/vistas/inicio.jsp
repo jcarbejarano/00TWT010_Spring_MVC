@@ -21,6 +21,9 @@
 	   role="button">Productos</a>
     <a href="comercio/productos/nuevo" class="btn btn-primary btn-lg active" 
 	   role="button">Crear producto</a>
+	   
+	<a href="regiones" class="btn btn-primary btn-lg active" 
+	   role="button">Regiones</a>   
 	
 	</nav>
 	

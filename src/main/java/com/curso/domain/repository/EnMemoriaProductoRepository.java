@@ -82,13 +82,14 @@ public class EnMemoriaProductoRepository implements ProductoRepository {
 
 
     @Override
-    public void addProducto(Producto p) {
+    public Producto addProducto(Producto p) {
     	this.listaDeProductos.add(p);
+    	return p;
     }
     
     
     @Override
-	public void modificarProducto(Producto producto) {
+	public Producto modificarProducto(Producto producto) {
     	 Producto productoPorId = null;
 
          for (int i = 0 ; i < this.listaDeProductos.size(); i++) {
@@ -99,6 +100,7 @@ public class EnMemoriaProductoRepository implements ProductoRepository {
                  break;
              }
          }
+         return producto;
 	}
     
     @Override

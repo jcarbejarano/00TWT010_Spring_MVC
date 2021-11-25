@@ -41,7 +41,7 @@ public class ProductoServiceImpl implements ProductoService {
 	}
 
 	@Override
-	public void crearProducto(Producto producto) throws GestionProductoException {
+	public Producto crearProducto(Producto producto) throws GestionProductoException {
 
 		// busco si existe ya
 		Producto p = productoRepositorio.getProductoPorId(producto.getIdProducto());
@@ -50,12 +50,13 @@ public class ProductoServiceImpl implements ProductoService {
 					"No pudo crear el Producto. Ya existe uno con id ");
 		}
 
-		productoRepositorio.addProducto(producto);
+		return productoRepositorio.addProducto(producto);
+		
 
 	}
 
 	@Override
-	public void modificarProducto(Producto producto) throws GestionProductoException {
+	public Producto modificarProducto(Producto producto) throws GestionProductoException {
 		// busco si existe ya
 		Producto p = productoRepositorio.getProductoPorId(producto.getIdProducto());
 		if (p == null) {
@@ -63,7 +64,7 @@ public class ProductoServiceImpl implements ProductoService {
 					"No pudo modificar el Producto. No existe con el id indicado ");
 		}
 
-		productoRepositorio.modificarProducto(producto);
+		return productoRepositorio.modificarProducto(producto);
 
 	}
 

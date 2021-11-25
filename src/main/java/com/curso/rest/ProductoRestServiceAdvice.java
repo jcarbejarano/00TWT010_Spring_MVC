@@ -16,6 +16,7 @@ class ProductoRestServiceAdvice {
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	public String employeeNotFoundHandler(GestionProductoException ex) {
 		return "{ msg: '"+ ex.getMessage() + " id producto:  "
-				+ ex.getIdProducto() +  "}'";
+				+ ex.getIdProducto() +  "'}";
 	}
 }
+
