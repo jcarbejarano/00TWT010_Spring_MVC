@@ -13,6 +13,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
+
 @Entity
 @Table( schema="HR", name = "PRODUCTOS")
 @NamedQueries({
